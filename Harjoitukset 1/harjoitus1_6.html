@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Harjoitukset 1: Tehtävä 6</title>
+</head>
+
+<body>
+        <h1>Taulukon [11, 22, 33, 44] läpikäyntiä</h1>
+        <p>for- ja for...of-silmukoilla</p>
+        <hr>
+        
+        <p>Alkiot ovat:</p>
+
+        <div id="arvot"></div>
+        
+        <div id="tulokset"></div>
+
+        <script>
+            let luvut = [11, 22, 33, 44];
+            let summa = luvut[0]+luvut[1]+luvut[2]+luvut[3];
+            let lkm = luvut.length;
+            let ka;
+            let tulosrivit;
+
+            /* Alkioiden lukumäärä ja summa tulee laskea for...of-rakenteella. Muuttujan tulosrivit sisältö tulee muodostaafor-rakenteella. 
+            Laske lisäksi keskiarvo ka-muuttujaan. Keskiarvo tulee tulostaa yhden desimaalin tarkkuudella. Liitä lopuksi muuttujiin keräämäsi 
+            data näytettäväksi P-elementissä getElementById/innerHTML-yhdistelmää käyttäen. */
+            
+            // taulukon arvojen tulostaminen indekseineen
+            /*for (let i = 0; i < luvut.length; i++) {
+                console.log(i);
+                // text += luvut[i] + "<br>";
+                //document.getElementById("arvot").innerHTML = 'taulukko[' + luvut.indexOf(i) + '] =' + arvo + '<br>';
+            }*/
+
+            // Taulukon arvojen tulostaminen indekseineen
+            /*
+            for(let i = 0; i < luvut.length; i++){
+                document.getElementById("arvot").innerHTML = "<p>taulukko["+ luvut.indexOf[i] + "] = " + luvut[i] + "</p>";
+                console.log(luvut[i]);
+            }
+            */
+            
+            for (let value of luvut) {
+                console.log(luvut.indexOf(value) + ':' + value);
+                document.getElementById("arvot").innerHTML = "<p>taulukko["+ luvut.indexOf(value) + "] = " + value + "</p>";
+            }
+
+            //lasketaan ka
+            ka = (luvut[0]+luvut[1]+luvut[2]+luvut[3]) / luvut.length;
+
+            document.getElementById("tulokset").innerHTML = "<p>Lukumäärä on: " + lkm + "<br>Summa on: " + summa + "<br>Keskiarvo on: " + ka + "</p>";
+        </script>
+</body>
+</html>
