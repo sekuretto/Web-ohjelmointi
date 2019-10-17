@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Harjoitukset 1: Tehtävä 6</title>
+    </head>
+    <body>
+        <h1>Taulukon [11, 22, 33, 44] läpikäyntiä</h1>
+        <p>for- ja for...of-silmukoilla</p>
+        <hr>
+        
+        <p>Alkiot ovat:</p>
+        
+        <div id="arvot"></div>
+        
+        <div id="tulokset"></div>
+        
+        <script>
+            var taulukko = [11, 22, 33, 44];
+            var summa;
+            var lkm = taulukko.length;
+            var ka = (taulukko[0]+taulukko[1]+taulukko[2]+taulukko[3]) / taulukko.length;
+            var tulosrivit;
+            
+            /*function alkiot(taulukko)
+            {
+                for ( i=0; i<taulukko.length; i++ )
+                {
+                    var rivi = "taulukko[" + (i) + "]" + " = " + taulukko[i] + "<br>";
+                    return rivi;
+                }
+            }*/
+            
+            
+            // taulukon arvojen tulostaminen indekseineen
+            for (i=0; i<taulukko.length; i++) {
+                document.getElementById("arvot").innerHTML = "taulukko[" + (i) + "]" + " = " + taulukko[i] + "</p>";
+            }
+            
+            /*function alkiot(taulukko) {
+                
+                for (i=0; i<taulukko.length; i++)
+                {
+                    //muodostetaan muuttujan tulosrivit sisältö
+                    //var tulosrivit;
+                    "taulukko[" + (i) + "]" + " = " + taulukko[i] + "<br>";
+                    //console.log("<p>taulukko[0] =" + taulukko[i] + "</p>");
+                }
+            }*/
+            
+            //lasketaan summa
+            summa = taulukko[0]+taulukko[1]+taulukko[2]+taulukko[3];
+            
+            // lasketaan ja tulostetaan keskiarvo
+            ka = (taulukko[0]+taulukko[1]+taulukko[2]+taulukko[3]) / taulukko.length;
+                        
+            document.getElementById("tulokset").innerHTML = 
+                "<p>Lukumäärä on: " + lkm + "<br>Summa on: " + summa + "<br>Keskiarvo on: " + ka + "</p>"
+        
+        </script>
+        
+    </body>
+</html>

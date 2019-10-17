@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <title>Harjoitukset 5: Tehtävä 1</title>
+    </head>
+    <body>
+        <h1>Laske luvut yhteen</h1>
+        <form id="myform">
+            Luku 1: <input type=text id="n1"><br>
+            Luku 2: <input type=text id="n2"><br>
+            <br>
+            <button type="button" id="summa">Summa</button>
+        </form>
+        
+        <p id="results"></p>
+        
+        
+        <script>
+            /*$("#myForm").submit(function(e){
+                // remove default submit behavior
+                e.preventDefault();
+                // lue luvut lomakkeelta (ovat merkkijonoja)
+            }*/
+                
+            $(document).ready(function(){
+                $("#summa").click(function(){
+                    let numero1 = $("#n1").val();
+                    let n1 = parseInt(numero1);
+                    let numero2 = $("#n2").val();
+                    let n2 = parseInt(numero2);
+                    let summa = n1 + n2;
+                    $("#results").text("Lukujen summa on " + summa);
+                });
+            });            
+                        
+        </script>
+        
+    </body>
+</html>

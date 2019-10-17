@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Harjoitukset 3: Tehtävä 1</title>
+    </head>
+    <body>
+        <h1>SimpleToDo</h1>
+        
+        <form>
+            ToDo:<br>
+            <input type="text" name="todo"><br><br>
+            <input type="submit" id="btn1" value="Lisää"><input type="reset" id="btn2" value="Tyhjää lista">
+        </form>
+        
+        <ul id="lista">
+            
+        </ul>
+        
+        <script>
+            btn1.onclick = function() {
+                let ulnode = document.getElementById("lista");
+                let linode = document.createElement('li');
+                let litext = document.createTextNode('Uusi teksti');
+                linode.appendChild(litext);
+                ulnode.appendChild(linode);
+            }
+            
+            btn2.onclick = function() {
+                var list = document.getElementById("lista");
+                while(list.hasChildNodes()) {
+                    list.removeChild(list.firstChild);
+                }
+            }
+        </script>
+    </body>
+</html>

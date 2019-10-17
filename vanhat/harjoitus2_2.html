@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Harjoitukset 2: Tehtävä 2</title>
+    </head>
+    <body>
+        <h1>Taulukon [11, 22, 33, 44] läpikäyntiä</h1>
+        <p>tulostamista ja keskeisten suureiden laskemista anonyymeilla funktioilla</p>
+        <hr>
+        
+        <p>Alkiot ovat:</p>
+        
+        <div id="arvot"></div>
+        
+        <div id="tulokset"></div>
+        
+        <script>
+            var taulukko = [11, 22, 33, 44];
+            var summa = arraySum(taulukko);
+            var lkm = arrayCount(taulukko);
+            var ka = arrayAvg(taulukko);
+                        
+            let arraySum = function(taulukko,) {
+                for(var i = 0; i < taulukko.length; i++){
+                    summa += taulukko[i];
+                }
+            }
+                
+             let arrayAvg = function(taulukko) {
+                // lasketaan ja tulostetaan keskiarvo
+                ka = (taulukko[0]+taulukko[1]+taulukko[2]+taulukko[3]) / taulukko.length;
+            }
+                 
+             let arrayCount = function(taulukko) {
+                lkm = taulukko.length;
+            }
+                 
+             let printArray = function(taulukko) {
+                
+            }
+            
+            console.log(summa);
+            console.log(lkm);
+            console.log(ka);
+            /*    ...
+            function writeResults() {
+              
+            }
+
+            ...
+            window.onload = writeResults;
+    
+                console.log(summa);
+            }*/
+           
+            
+            //lasketaan summa
+            //summa = taulukko[0]+taulukko[1]+taulukko[2]+taulukko[3];
+            
+            
+                        
+            /*document.getElementById("tulokset").innerHTML = 
+                "<p>Lukumäärä on: " + lkm + "<br>Summa on: " + summa + "<br>Keskiarvo on: " + ka + "</p>";*/
+        
+        </script>
+    </body>
+</html>

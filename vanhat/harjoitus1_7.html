@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Harjoitukset 1: Tehtävä 7</title>
+        <link rel="stylesheet" type="text/css" href="h01t07-nettoasunto-html5-lomake.css">
+    </head>
+    <body>
+        <header><h1>Nettoasunto - Ilmianna loistokohde</h1></header>
+        <main>
+            <form action="nayta-http-data.php" method="post">
+            <fieldset>
+                <legend>Ilmiantaja</legend>
+                <label for='nimi'>Nimi:</label>
+                <input type="text" size="50" name="nimi" placeholder="Kirjoita nimesi tähän" autofocus required><br>
+                <label for='puhelin'>Puhelin:</label>
+                <input type="tel" size="50" name="puhelin" pattern="040 [0-9]{3} [0-9]{3} [0-9]{1}" placeholder="Puhelinnumero muodossa 040 xxx xxx x"><br>
+                <label for='email'>Email:</label>
+                <input type="email" size="50" name="email" placeholder="Kirjoita sähköpostiosoitteesi tähän">
+            </fieldset>
+            
+           <fieldset>
+                <legend>Ilmoituksen URL</legend>
+                <label for='URL'>Myynti-ilmoituksen URL:</label>
+                <input type="url" size="50" name="URL" placeholder="Kopioi jokakodin/Etuoven kohdeURL tähän">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Asunnon pyyntihinta</legend>
+                <output name="pyynti" for="hinta1"></output>
+                <p>1 kEUR<input type="range" id="hinta1"  min="1" max="500">500 kEUR</p>
+            </fieldset>
+                            
+            <fieldset>
+                <legend>Arvioimani hinta</legend>
+                <output name="arvio" for="hinta2"></output>
+                1 kEUR<input type="range" id="hinta2"  min="1" max="500">500 kEUR
+            </fieldset>
+            
+            <fieldset>
+                <legend>Suosikkiasuinalueeni</legend>
+                <p>
+                <input list="asuinalueet">
+                <datalist id="asuinalueet">
+                    <option value="Aittorinne">
+                    <option value="Keskusta">
+                    <option value="Kortepohja">
+                    <option value="Kuokkala">
+                    <option value="Roninmäki">
+                </datalist>
+                </p>
+            </fieldset>
+            
+            <p>
+                <input id="nappi" type="submit" value="Ilmianna asunto!">
+            </p>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2014 Q&amp;D Software Ltd. Kaikki oikeudet pidätetään.</p>
+        </footer>
+    </body>
+</html>
