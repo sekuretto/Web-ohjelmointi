@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Harjoitukset 2: Tehtävä 4</title>
+</head>
+
+<body>
+        <form>
+            <h1>Vauhtilaskin</h1>
+
+        </form>
+        
+        <div id="results"></div>
+
+        <script>
+            /* 
+            Toteuta JavaScriptillä oheisen kuvan mukainen vauhtilaskin. 
+            Ohjelma laskee syötettyjen arvojen perusteella liikkujalle 
+            sekä km/h- että min:sec/km-vauhdin. Tulokset näytetään kahden 
+            desimaalin tarkkuudella. Lomakkeessa voi olla syötteille 
+            sopivat oletusarvot ja niille ei tarvitse tehdä tarkistuksia. 
+            Erikoisille syötteille ei tarvitse myöskään muotoilla 
+            tulostuksia, vauhti voidaan tulostaa vaikka 3456:45/km 
+            Toteutus tulee tehdä Vauhtilaskin-luokkana class-määreellä 
+            määriteltynä. Syötetyt arvot tulee asettaa constructor-metodissa 
+            luokasta luotavan olion ominaisuuksiksi. Vauhdit tulee laskea 
+            metodeilla calcKmhPace() ja calcMinkmPace(). Vauhdit 
+            palautetaan "getter"-metodeilla kmhpace() ja minkmpace(). 
+            Käyttöliittymästä tulee löytyä oheisessa kuvassa nähdyt osat, 
+            mutta ulkoasu on vapaa - halutessasi hyvin yksinkertainen.
+            */
+            // kmh-laskentaa 
+            var tunnit = parseInt(h)+(parseInt(min)*60+parseInt(sec))/3600; 
+            var kmh = kilometrit/tunnit;
+             ... 
+ 
+            // min.sec/km-laskentaa 
+            var sekunnit = parseInt(h)*60*60+parseInt(min)*60+parseInt(sec); 
+            sekunnitPerKm = sekunnit/km; 
+ 
+            var minutes = 0; 
+ 
+            while (sekunnit >= 60) {
+                minutes++;   
+                sekunnit = sekunnit - 60; 
+            } 
+            sekunnit = Math.round(sekunnit); 
+            sekunnit = String('0'+ sekunnit).slice(-2); 
+        </script>
+</body>
+</html>
