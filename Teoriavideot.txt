@@ -1,0 +1,43 @@
+Web-ohjelmointi teoriavideot
+
+Video 1: Toimintaympäristöä, Putty-esimerkki [09:31] (hieman aaltoileva ääni)
+https://www.youtube.com/watch?v=IE5J3VGuQ90&feature=youtu.be
+
+Video 2: Javascript 1 [11:56]
+https://www.youtube.com/watch?v=pDtJuUGJaH4&feature=youtu.be
+
+Video 3: Javascript / ES6 - Osa 1 [14:55]
+https://www.youtube.com/watch?v=EO5QqMN861g
+
+Video 4: Javascript / ES6 - Osa 2 [11:45]
+https://www.youtube.com/watch?v=yqQdJtfARhI
+
+Video 5: DOM - Osa 1 [14:32]
+https://www.youtube.com/watch?v=fCpnwveVCbQ
+
+Video 6: DOM - Osa 2 [11:14]
+https://www.youtube.com/watch?v=KWOu1OvlvDw
+
+Video 7: AJAX, JSON - Osa 1 [11:29]
+https://www.youtube.com/watch?v=px8xB2BcjQg'
+
+Video 8: AJAX, JSON - Osa 2 [15:01]
+https://www.youtube.com/watch?v=Yloi1J3KLl8
+
+Video 9: jQuery [06:23]
+https://www.youtube.com/watch?v=JbRbJbHbOoM
+
+Video 10: HTML5 -JavaScript APIs [15:01]
+https://www.youtube.com/watch?v=lVw7Kuq7Rk8&feature=youtu.be
+
+Vanha video:Video 11: Google MAP APIs [13:38]
+https://www.youtube.com/watch?v=Bab_-nrP14Q
+
+Video 12: React - perusteet [14:51]
+https://www.youtube.com/watch?v=A-nc-r0rkvM
+
+Video 13: React - perusteiden jatkoa [14:44]
+https://www.youtube.com/watch?v=MRFt91QExSU
+
+Video 14: React - jatkoa [14:18]
+https://www.youtube.com/watch?v=zLSCIGmffio
