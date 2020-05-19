@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Harjoitukset 1: Tehtävä 5</title>
+</head>
+
+<body>
+    <h1>Taulukon [11, 22, 33, 44] läpikäyntiä</h1>
+    <p>for- ja for...of-silmukoilla</p>
+    <hr>
+
+    <p>Alkiot ovat:</p>
+
+    <div id="arvot"></div>
+
+    <div id="tulokset"></div>
+
+    <script>
+        let luvut = [11, 22, 33, 44];
+        let summa = 0;
+        let lkm = 0;
+        let ka;
+        let tulosrivit = "";
+
+        // alkioiden lukumäärä ja summa
+        for (let value of luvut) {
+            lkm++;
+            summa += value;
+        }
+
+        // taulukon arvojen tulostaminen indekseineen
+        for (let i = 0; i < lkm; i++) {
+            tulosrivit += "taulukko[" + i + "] = " + luvut[i] + " <br>";
+            document.getElementById("arvot").innerHTML = tulosrivit;
+            console.log(tulosrivit);
+        }
+
+        // lasketaan ka
+        ka = (luvut[0] + luvut[1] + luvut[2] + luvut[3]) / lkm;
+
+        document.getElementById("tulokset").innerHTML = "<p>Lukumäärä on: " + lkm + "<br>Summa on: " + summa +
+            "<br>Keskiarvo on: " + ka + "</p>";
+    </script>
+</body>
+
+</html>
