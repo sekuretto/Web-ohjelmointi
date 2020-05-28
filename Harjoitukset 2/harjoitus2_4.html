@@ -13,9 +13,9 @@
             Tunnit: <input type="number" name="h"><br><br>
             Minuutit: <input type="number" name="min"><br><br>
             Sekunnit: <input type="number" name="sec"><br><br>
-            Kilometrit: <input type="number" name="kilometrit"><br><br>
+            Kilometrit: <input type="number" name="km"><br><br>
             <input type="button" style="background: blue; color: white; padding: 5 20px;" value="Laske vauhdit"
-                onclick="">
+                onclick="VauhtiLaskin(h, min, sec, km)">
         </div>
         <div id="tulos"></div>
     </form>
@@ -38,32 +38,80 @@
             mutta ulkoasu on vapaa - halutessasi hyvin yksinkertainen.
             */
 
-        //class
-        /*        class Vauhtilaskin {
-                    constructor(brand) {
-                        this.carname = brand;
-                    }
+            // Vauhtilaskin-luokka
+            class Vauhtilaskin {
+                constructor(h, min, sec, km) {
+                    this.tunnit = h;
+                    this.minuutit = min;
+                    this.sekunnit = sec;
+                    this.kilometrit = km;
                 }
-                mycar = new Car("Ford"); 
-                */
+                // Getters
+                get kmhpace() {
+                    return this.calcKmhPace();
+                }
+                get minkmpace() {
+                    return this.calcKmhPace();
+                }
+ 
+                // Metodit
+                calcKmhPace(h, min, sec, km) {
+                    let hours = parseInt(h) + (parseInt(min) * 60 + parseInt(sec)) / 3600;
+                    let kmh = km / hours;
+                    return kmh;
+                }
+                calcMinkmPace(h, min, sec, km) {
+                    let seconds = parseInt(h) * 60 * 60 + parseInt(min) * 60 + parseInt(sec);
+                    let sekunnitPerKm = seconds / km;
 
-        // kmh-laskentaa 
-        var tunnit = parseInt(h) + (parseInt(min) * 60 + parseInt(sec)) / 3600;
-        var kmh = kilometrit / tunnit;
-        ...
+                    let minutes = 0;
 
-        // min.sec/km-laskentaa 
-        var sekunnit = parseInt(h) * 60 * 60 + parseInt(min) * 60 + parseInt(sec);
-        sekunnitPerKm = sekunnit / km;
+                    while (seconds >= 60) {
 
-        var minutes = 0;
+                        minutes++;
+                        seconds = seconds - 60;
+                    }
+                    seconds = Math.round(seconds);
+                    seconds = String('0' + seconds).slice(-2);
+                    return sekunnitPerKm;
+                }
+            };
 
-        while (sekunnit >= 60) {
-            minutes++;
-            sekunnit = sekunnit - 60;
-        }
-        sekunnit = Math.round(sekunnit);
-        sekunnit = String('0' + sekunnit).slice(-2);
+            let h;
+            let min;
+            let sec;
+            let km;
+            const vauhti = new Vauhtilaskin(h, min, sec, km);
+
+            console.log(this.tunnit);
+            /*console.log(vauhti.kmhpace);
+            console.log(vauhti.minkmpace);
+            let arvot = ` 
+                <p>${vauhti.kmhpace} km/h <br>
+                ${vauhti.minkmpace} /km</p>
+            `;
+            return arvot;*/
+
+            // kmh-laskentaa 
+            /*let tunnit = parseInt(h) + (parseInt(min) * 60 + parseInt(sec)) / 3600;
+            let kmh = kilometrit / tunnit;
+
+            // min.sec/km-laskentaa 
+            let sekunnit = parseInt(h) * 60 * 60 + parseInt(min) * 60 + parseInt(sec);
+            sekunnitPerKm = sekunnit / km;
+
+            let minutes = 0;
+
+            while (sekunnit >= 60) {
+                minutes++;
+                sekunnit = sekunnit - 60;
+            }
+            sekunnit = Math.round(sekunnit);
+            sekunnit = String('0' + sekunnit).slice(-2);*/
+
+        //let arvot = "";
+        let p = document.getElementById("tulos");
+        p.innerHTML = Vauhtilaskin.kmhpace;
     </script>
 </body>
 

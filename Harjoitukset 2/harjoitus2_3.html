@@ -8,31 +8,12 @@
 
 <body>
     <h1>Taulukon [11, 22, 33, 44] läpikäyntiä</h1>
-    <p>tulostamista ja keskeisten suureiden laskemista anonyymeillä funktioilla</p>
+    <p>tulostamista ja keskeisten suureiden laskemista lambda-merkityillä funktioilla</p>
     <hr>
 
     <div id="results"></div>
 
     <script>
-        /* 
-            Toteuta funktiot arraySum, arrayAvg, arrayCount ja printArray 
-            lambda-merkittyinä funktioina siten että ainoastaan 
-            printArray-funktiossa on sallittua käyttää return-lausetta 
-            näkyviin kirjoitettuna. Käytä arraySum-funktiossa 
-            Array.prototype.reduce()-metodia. Muodosta lisäksi 
-            JavaScriptillä näytettäväksi generoitava sisältö 
-            Template-literaalina sisalto-nimiseen muuttujaan, jonka 
-            liität sitten näytettäväksi P-elementtiin. Ohessa runkoa 
-            tämän jälkimmäisen kohdan ratkaisemiseksi.
-
-            let sisalto = ` 
-                Alkiot ovat:<br><br>
-                ... 
-            `; 
-             para.innerHTML   = sisalto; 
-            */
-        let sisalto;
-
         function writeResults() {
             const luvut = [11, 22, 33, 44];
 
@@ -62,11 +43,15 @@
 
             printArray(luvut);
 
+            let sisalto = ` 
+                <p>Alkiot ovat:<br>
+                ${taulukko}</p>
+                <p>Lukumäärä on: ${lkm}<br>
+                Summa on: ${summa}<br>
+                Keskiarvo on: ${ka}</p>
+            `; 
             let p = document.getElementById("results");
-            p.innerHTML = "<p>Alkiot ovat:<br>" + taulukko +
-                "<br>Lukumäärä on: " + lkm +
-                "<br>Summa on: " + summa +
-                "<br>Keskiarvo on: " + ka + "</p>";
+            p.innerHTML = sisalto;
             return p;
         };
 
