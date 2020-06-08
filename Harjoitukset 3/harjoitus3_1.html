@@ -11,7 +11,7 @@
                 <div id="todo" style="margin: 20px;">
                         <h1>SimpleToDo</h1>
                         To Do:<br>
-                        <input type="text" id="todo"><br><br>
+                        <input type="text" id="task" placeholder="Adding a next task"><br><br>
                         <input type="button" value="Lisää" onclick="luoLista(todo);">
                         <input type="reset" value="Tyhjennä lista" onclick="poistaLista();">
                 </div>
@@ -20,16 +20,17 @@
 
         <script>
                 function luoLista() {
-                        let task = document.getElementById("todo");
-                        let ulnode = document.getElementById("lista");
-                        let linode = document.createElement('li');
-                        let litext = document.createTextNode('task');
-                        linode.appendChild(litext);
-                        ulnode.appendChild(linode);
+                        const task = document.querySelector('#task');
+                        let lista = document.getElementById('lista');
+                        let tehtava = document.createElement('li');
+                        let text = document.createTextNode(task.value);
+                        tehtava.appendChild(text);
+                        lista.appendChild(tehtava);
+                        task.value = "";
                 };
 
                 function poistaLista() {
-                        var lista = document.getElementById("lista");
+                        let lista = document.getElementById("lista");
                         while (lista.hasChildNodes()) {
                                 lista.removeChild(lista.firstChild);
                         };
