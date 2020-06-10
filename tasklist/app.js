@@ -99,7 +99,6 @@ function storeTaskInLocalStorage(task) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-
 // Remove Task
 function removeTask(e) {
   if(e.target.parentElement.classList.contains('delete-item')) {

@@ -7,10 +7,21 @@
 </head>
 
 <body>
-        
+        <div style="text-align: center">
+                <p><a href="#" onclick="vaihdaKuva('black-and-white-cat-sitting-beside-clear-glass-beverage-1441597.jpg')">KUVA 1</a> | 
+                <a href="#" onclick="vaihdaKuva('black-cat-holding-persons-arm-1049764.jpg')">KUVA 2</a> | 
+                <a href="#" onclick="vaihdaKuva('close-up-of-cat-248280.jpg')">KUVA 3</a> | 
+                <a href="#" onclick="vaihdaKuva('monochrome-photo-of-tabby-cat-2527491.jpg')">KUVA 4</a> | 
+                <a href="#" onclick="vaihdaKuva('orange-tabby-cat-beside-fawn-short-coated-puppy-46024.jpg')">KUVA 5</a>
+                </p>
+                <img src="black-and-white-cat-sitting-beside-clear-glass-beverage-1441597.jpg" id="kuva" width="800px" height="auto">
+        </div>
 
         <script>
-
+                function vaihdaKuva(e) {
+                        document.getElementById('kuva').src = e;
+                        e.preventDefault();
+                }
         </script>
 </body>
 

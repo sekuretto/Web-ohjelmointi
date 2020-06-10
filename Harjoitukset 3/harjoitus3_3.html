@@ -5,25 +5,34 @@
     <meta charset="UTF-8">
     <title>Harjoitukset 3: Tehtävä 3</title>
     <script>
-        var hcpdata = [{
-                "name": "Ari",
-                "hcp": 54
-            },
-            {
-                "name": "Pasi",
-                "hcp": 5
-            },
-            {
-                "name": "Seppo",
-                "hcp": 20
-            }
-        ];
+        var hcpdata = [{ "name": "Ari", "hcp": 54 },
+                       { "name": "Pasi", "hcp": 5 },
+                       { "name": "Seppo", "hcp": 20 }];
     </script>
 </head>
 
 <body>
-    <button>Tulosta tasoitukset</button>
+    <button id="btn">Tulosta tasoitukset</button>
     <ul id="hcplist"></ul>
+
+    <script>
+        const btn = document.querySelector('#btn');
+        const list = document.querySelector('#hcplist');
+                        
+        btn.addEventListener('click', tulosta);
+
+        function tulosta(e){
+            for (i=0; i < hcpdata.length; i++) {
+                const li = document.createElement('li');
+                const text1 = hcpdata[i].name + " " + hcpdata[i].hcp;
+                const text = document.createTextNode(text1);
+                li.appendChild(text);
+                list.appendChild(li);
+            }
+            btn.removeEventListener('click', tulosta);
+        }
+
+    </script>
 </body>
 
 </html>
