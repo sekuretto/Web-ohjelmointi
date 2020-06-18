@@ -1,0 +1,12 @@
+.container {
+  width: 500px;
+  height: 200px;
+  background-color: cadetblue;
+  border: 1px dotted #000000;
+  text-align: center;
+  margin: auto;
+}
+
+h2 {
+  color: #000000;
+}
