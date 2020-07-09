@@ -7,11 +7,50 @@
 </head>
 
 <body>
-
+  <canvas id="canvas" width="650" height="400" style="border:1px solid #000000;"></canvas>
+  <br>
+  <canvas id="canvas2" width="650" height="400" style="border:1px solid #000000;"></canvas>
 
 
   <script>
+    //ruotsin lippu
+    let c = document.getElementById("canvas");
+    let context = c.getContext("2d");
+    context.fillStyle = "yellow";
+    context.fillRect(0, 0, 650, 400);
+    context.fillStyle = "blue";
+    context.fillRect(0, 0, 170, 150);
+    context.fillRect(0, 250, 170, 150);
+    context.fillRect(280, 0, 370, 150);
+    context.fillRect(280, 250, 370, 150);
 
+    //guyanan lippu
+    let c2 = document.getElementById("canvas2");
+    let ctx = c2.getContext("2d");
+    ctx.fillStyle = "green";
+    ctx.fillRect(0, 0, 650, 400);
+    //keskimmäinen kolmio valkoisella rajaviivalla
+    ctx.beginPath();
+    ctx.moveTo(0, 5);
+    ctx.lineTo(635, 200);
+    ctx.lineTo(0, 395);
+    ctx.closePath();
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = "#ffffff";
+    ctx.stroke();
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    //pienin kolmio mustalla rajaviivalla
+    ctx.beginPath();
+    ctx.moveTo(0, 5);
+    ctx.lineTo(325, 200);
+    ctx.lineTo(0, 395);
+    ctx.closePath();
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = "#000000";
+    ctx.stroke();
+    ctx.fillStyle = "red";
+    ctx.fill();
   </script>
 </body>
 

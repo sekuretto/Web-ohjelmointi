@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitukset 6: Tehtävä 3</title>
+  <style>
+    #divToDrop {
+      width: 800px;
+      height: 400px;
+      background-color: #FFF;
+      border: 1px solid #000000;
+      margin: 5px;
+    }
+
+    .thumbnail {
+      height: 125px;
+      border: 1px solid #000000;
+      margin: 2px 2px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Drag and Drop Images Example</h1>
+  </div>
+  <p>Drag images from desktop into the rectangle</p>
+
+  <div id="divToDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+  <script>
+    let div = document.getElementById("divToDrop");
+
+    div.addEventListener('dragenter', allowDrop, false);
+    div.addEventListener('dragleave', allowDrop, false);
+    div.addEventListener('dragover', allowDrop, false);
+    div.addEventListener('drop', drop, false);
+
+    function allowDrop(event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      let files = [...event.dataTransfer.files];
+      console.log(files);
+      files.forEach(previewFile);
+
+      // if (!file.type.match('image/*')) continue;
+      function previewFile() {
+        let reader = new FileReader();
+        reader.readAsDataURL(files);
+        reader.onload = function () {
+          let img = document.createElement('img')
+          img.src = reader.result;
+          img.setAttribute("class", "thumbnail");
+          document.getElementById('gallery').appendChild(img);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

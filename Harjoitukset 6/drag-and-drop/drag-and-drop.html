@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Drag and Drop Example</title>
+  <meta charset="utf-8">
+  <script src="dragAndDrop.js"></script>
+  <style>
+    #divToDrop {
+      width: 210px;
+      height: 320px;
+      background-color: #FFF;
+      border: 1px solid #000000;
+      margin: 5px;
+    }
+
+    #drag1 {
+      width: 200px;
+      height: 100px;
+      background-color: #F00;
+      margin: 5px;
+    }
+
+    #drag2 {
+      width: 200px;
+      height: 100px;
+      background-color: #0F0;
+      margin: 5px;
+    }
+
+    #drag3 {
+      width: 200px;
+      height: 100px;
+      background-color: #00F;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h1>Drag and Drop Example</h1>
+  </div>
+  <p>Drag small divs into the rectangle</p>
+
+  <div id="divToDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+  <div id="drag1" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drag2" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drag3" draggable="true" ondragstart="drag(event)"></div>
+
+</body>
+
+</html>

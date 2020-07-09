@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas animation with requestrAnimFrame</title>
+  <script>
+    var canvas;
+    var WIDTH;
+    var HEIGHT;
+    var ctx;
+    var dx, dy;
+    var x, y;
+
+    // perform an animation and requests that the browser call a specified 
+    // function to update an animation before the next repaint
+    window.requestAnimFrame =
+      window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      function (callback) {
+        window.setTimeout(callback, 1000 / 60);
+      };
+
+    function init() {
+      // find the <canvas> element
+      canvas = document.getElementById("myCanvas");
+      WIDTH = canvas.width;
+      HEIGHT = canvas.height;
+      // get canvas context
+      ctx = canvas.getContext("2d");
+      // speed settings
+      dx = 4;
+      dy = 3;
+      x = 0;
+      y = 0;
+      // start timer
+      // setInterval(draw, 10);
+      requestAnimationFrame(draw);
+    }
+
+    function drawCircle(x, y, r) {
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2, true);
+      ctx.fill();
+      //console.log("drawCircle x="+x+" y"+y);
+    }
+
+    function drawRect(x, y, w, h) {
+      ctx.beginPath();
+      ctx.rect(x, y, w, h);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function clear() {
+      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    }
+
+    function draw() {
+      clear();
+      ctx.fillStyle = "#FFFFFF";
+      drawRect(0, 0, WIDTH, HEIGHT);
+      ctx.fillStyle = "#444444";
+      if (x + dx > WIDTH || x + dx < 0) dx = -dx;
+      if (y + dy > HEIGHT || y + dy < 0) dy = -dy;
+      x += dx;
+      y += dy;
+      drawCircle(x, y, 10);
+      // request new frame
+      requestAnimFrame(draw);
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <div>
+    <h2>Canvas animation with requestrAnimFrame</h2>
+    <canvas id="myCanvas" width="800" height="400" style="border:1px solid #000000;"></canvas>
+  </div>
+</body>
+
+</html>

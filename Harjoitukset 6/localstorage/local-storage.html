@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My To-Do List</title>
+  <script src="todo.js"></script>
+</head>
+
+<body onload="init();">
+  <div>
+    <h2>My To-Do List</h2>
+    <input type="text" id="new_item">
+    <button onclick="add_item()">Add</button>
+  </div>
+
+  <div>
+    <ul id="todo_list" />
+  </div>
+
+  <div>
+    <button onClick="clear_list()">Clear all</button>
+  </div>
+
+</body>
+
+</html>

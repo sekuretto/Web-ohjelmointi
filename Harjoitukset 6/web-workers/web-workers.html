@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Workers Example</title>
+  <meta charset="utf-8">
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIvDv3XrWddmzyMIrj8jWzGvxgfQkFvrM&callback=initMap"
+    type="text/javascript"></script>
+  <script src="location.js"></script>
+  <script src="calc.js"></script>
+</head>
+
+<body onLoad="show_position();">
+
+  <div>
+    <h1>Web Workers Example</h1>
+  </div>
+  <div id="mapholder" style="height:250px;width:500px"></div>
+  <div>
+    <p>Try dragging the map while complex calculation is running behind</p>
+  </div>
+  <div>
+    <input type="button" value="Calculate without workers" onclick="calc_no_worker()" />
+    <input type="button" value="Calculate with workers" onclick="calc_worker()" />
+  </div>
+  <div>
+    <p id="calc_result" />
+  </div>
+</body>
+
+</html>

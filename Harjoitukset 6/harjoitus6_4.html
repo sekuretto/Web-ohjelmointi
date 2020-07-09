@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitukset 6: Tehtävä 4</title>
+  <style>
+    form {
+      text-align: center;
+    }
+
+    canvas {
+      border: 1px solid #000000;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label for="vol"><strong>Säädä nestepinnan korkeus:</strong></label>
+    <p id="valinta"></p>
+    <span>0 cm</span><input type="range" id="vol" name="vol" min="0" max="200"><span>200 cm</span>
+  </form>
+  <br>
+  <canvas id="canvas" width="900" height="600">
+
+  </canvas>
+
+  <script>
+    var slider = document.getElementById("vol");
+    var output = document.getElementById("valinta");
+    output.innerHTML = slider.value + " cm";
+
+    const r = 10;
+    const korkeus = 10;
+    let tilavuus = Math.PI * r * r * korkeus;
+    let tynnyri = tilavuus.toFixed(2)
+    let teksti = `Tynnyrin tilavuus: ${tynnyri} litraa`;
+
+    //valinnat
+    var a = document.getElementById("canvas");
+    var ctx = a.getContext("2d");
+    ctx.font = "15px Arial";
+    ctx.fillText("Tynnyrin pituus: 100cm", 10, 20);
+    ctx.fillText("Tynnyrin halkaisija: 200cm", 10, 40);
+    ctx.fillText(teksti, 10, 60);
+    ctx.fillText("Nestemäärä: ", 10, 120);
+
+    //tynnyri
+    var b = document.getElementById("canvas");
+    var ctx = b.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(450, 300, 200, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    slider.oninput = function () {
+      output.innerHTML = this.value + " cm";
+      let d = Number(this.value);
+
+      //laskut
+      let h = r - d;
+      let alpha = Math.acos(h / r);
+      let base = h * Math.tan(alpha);
+      let kolmio = (base * h) / 2;
+      console.log(h);
+      // console.log(alpha);
+      // console.log(base);
+      // console.log(kolmio);
+    }
+
+    //segmentti
+    // ctx.beginPath();
+    // ctx.fillStyle = color;
+    // ctx.arc(x,y,r,angleStart,angleEnd);
+    // ctx.closePath();
+    // ctx.fill();
+    // ctx.stroke();
+  </script>
+
+</body>
+
+</html>
