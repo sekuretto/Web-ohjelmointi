@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" charset="UTF-8">
+  <title>Harjoitukset 7: Tehtävä 3</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <style>
+    .container {
+      width: 700px;
+      height: 800px;
+    }
+  </style>
+</head>
+
+<body onload="drawchart()">
+  <h2>Autolaskuri</h2>
+  <input type="button" id="ford" value="Ford" onclick="addcar(this)"><input type="button" id="opel" value="Opel"
+    onclick="addcar(this)"><input type="button" id="toyota" value="Toyota" onclick="addcar(this)"><input type="button"
+    id="reset" value="Nollaa" onclick="nollaa()">
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    let ford = 0;
+    let opel = 0;
+    let toyota = 0;
+
+    function addcar(e) {
+      let auto = e.value;
+      switch (auto) {
+        case 'Ford':
+          ford++;
+          break;
+        case 'Opel':
+          opel++;
+          break;
+        case 'Toyota':
+          toyota++;
+      }
+      drawchart();
+    }
+
+    function nollaa() {
+      let ford = 0;
+      let opel = 0;
+      let toyota = 0;
+      drawchart();
+    }
+
+    function drawchart() {
+      var ctx = document.getElementById("myChart").getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["Ford", "Opel", "Toyota"],
+          datasets: [{
+            label: 'Lukumäärä (kpl)',
+            data: [ford, opel, toyota],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255,99,132,1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+          }],
+        },
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: 'Autojen lukumäärät'
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

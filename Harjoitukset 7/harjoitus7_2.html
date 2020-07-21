@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitukset 7: Tehtävä 3</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <style type="text/css">
+    #map {
+      height: 1024px;
+      width: 1024px;
+    }
+
+    .custom-popup .leaflet-popup-content-wrapper {
+      background: #ffc;
+      font-size: 12px;
+      line-height: 18px;
+      position: relative;
+      top: -30px
+    }
+
+    .custom-popup .leaflet-popup-content-wrapper a {
+      color: rgba(0, 0, 255, 0.5);
+    }
+
+    .custom-popup .leaflet-popup-tip-container {
+      width: 30px;
+      height: 15px;
+    }
+
+    .custom-popup .leaflet-popup-tip {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid #2c3e50;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Golfin kulta- ja etukentät</h2>
+  <div class='custom-popup' id="map"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    let mymap = L.map('map').setView([62.239698, 25.749213], 7);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 20,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1Ijoic2VrdXJldHRvIiwiYSI6ImNqbm5yejVtODIwNnozcHRhNTFycGdwMWUifQ.8hijYk75oYwvL9whAV_Www'
+    }).addTo(mymap);
+
+    var yellowIcon = L.icon({
+      iconUrl: 'yellow-dot.png', // Tämä tiedosto sinun pitää itse hakea jostakin ilmaisesta
+      // kokoelmasta esim  https://www.flaticon.com/free-icon/map-marker_33622
+      iconSize: [32, 32], // size
+      iconAnchor: [16, 32], // point of the icon which will correspond to marker's location
+      popupAnchor: [-32, -32] // point from which the popup should open relative to the iconAnchor
+    });
+
+    // ... muun väriset markkerit samoin
+
+
+    $.ajax({
+    url: 'kentat.json'
+    }).fail(function () {
+    console.log("fail!");
+    }).done(function (data) {
+    // loop through all courses
+    $.each(data.kentat, function (index, kentta) {
+      // marker, get position lat and lng
+
+      //console.log(kentta);
+      var marker = L.marker([kentta.lat, kentta.lng], {
+        icon: yellowIcon
+      }).addTo(mymap);
+
+      // ...
+      /* Tähän ohjelmakoodi, jolla JSON-tiedoston perusteella voidaan näyttää oikean värinen markkeri */
+
+
+      /*
+
+          Tähän ohjelmakoodi, jossa markkeriin liitetään tapahtumakuuntelija klikkausta varten
+          sekä ohjelmoidaan toiminnot sitten popup-ikkunan informaation näyttämiselle JSON-
+          tiedostin tietojen perusteella.
+      */
+    });
+
+    }); // each
+    }); // ajax done
+  </script>
+
+</body>
+
+</html>

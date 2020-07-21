@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harjoitukset 8: Tehtävä 4</title>
+  <style>
+    * {
+      width: 400px;
+      margin: auto
+    }
+
+    .box {
+      border: 1px dashed #000;
+      padding: 15px;
+      background-color: #adbed8;
+    }
+
+    input[type="text"] {
+      width: 200px;
+    }
+
+    button {
+      background-color: #069;
+      border-radius: 5px;
+      color: #fff;
+      margin-bottom: 5px;
+      padding: 5px 15px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Yhteenlaskin</h3>
+  <div id="ratkaisu" class="box"></div>
+
+  <!-- Main library-->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <!-- DOM -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- JSX -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script type="text/babel">
+    class Yhteenlaskin extends React.Component {
+      constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.n1 = React.createRef();
+        this.n2 = React.createRef();
+        this.tulos = React.createRef();
+      }
+      handleChange (event) {
+        event.preventDefault();
+        let luku1 = parseInt(this.refs.n1.value);
+        let luku2 = parseInt(this.refs.n2.value);
+        let summa = luku1 + luku2;
+        this.refs.tulos.value = summa;
+      }
+
+      render() {
+        return (
+          <div>
+		        <table>
+		          <tbody>
+		          <tr><td>Luku1:</td><td><input type="text" ref="n1" onChange={this.handleChange} /></td></tr>
+		          <tr><td>Luku2:</td><td><input type="text" ref="n2" onChange={this.handleChange} /></td></tr>
+		          <tr><td>Tulos:</td><td><input type="text" ref="tulos" defaultValue="" /></td></tr>
+		          </tbody>
+		        </table>
+	        </div>
+        );
+      }
+    }
+    
+    ReactDOM.render(
+      <Yhteenlaskin />,
+      document.getElementById("ratkaisu")
+    );
+  </script>
+</body>
+
+</html>

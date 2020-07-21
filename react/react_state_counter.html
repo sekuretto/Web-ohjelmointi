@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>react06-99.html</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script type="text/babel">
+
+    // Counter component
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: props.initialCount};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  // handle button click event
+  handleClick () {
+      // this.props.initialCount++; <- doesn't work "read only property"
+      this.setState({count: this.state.count + 1});
+  }
+
+  render() {
+    return (
+      <div>
+          <p>Count : {this.state.count}</p>
+          <button onClick={this.handleClick}>Click!</button>
+      </div>
+    );
+  }
+
+}
+
+// render
+ReactDOM.render(
+    <Counter initialCount={0}/>,
+    document.getElementById("root")
+);
+    </script>
+</body>
+
+</html>

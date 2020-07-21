@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Web-ohjelmointi: React / props</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="container"></div>
+  <script type="text/babel">
+
+    class Number extends React.Component {
+  render() {
+    return (
+      <p>Number : {this.props.number}</p>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    var number = Math.random();
+    return (
+      <div>
+          <h1>{this.props.header}</h1>
+          <p>{this.props.text}</p>
+          <Number number = {number}/>
+       </div>
+    );
+  }
+}
+
+ReactDOM.render(
+    <App header="This is a header" text="This is a text"/>,
+    document.getElementById('container')
+);
+        </script>
+</body>
+
+</html>

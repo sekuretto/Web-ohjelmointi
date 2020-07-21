@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>react09.html</title>
+  <style>
+    body {
+      width: 400px;
+      margin: auto
+    }
+
+    .box {
+      border: 1px dashed #000;
+      padding: 15px;
+      background-color: #adbed8;
+    }
+
+    .tulosalue {
+      border: 1px dashed #000;
+      padding: 15px;
+      background-color: #adbed8;
+    }
+
+    input[type="text"] {
+      width: 200px;
+    }
+
+    .nappi {
+      background-color: #069;
+      border-radius: 5px;
+      color: #fff;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      padding: 5px 15px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root" class="box"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    class Eventer extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {value: '#ff0', textlinevalue: ''};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleTextChange = this.handleTextChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      handleChange (event) {
+          this.setState({value: event.target.value,});
+      }
+      handleTextChange (event) {
+          this.setState({textlinevalue: event.target.value,});
+      }
+      handleSubmit (event) {
+        this.refs.colorarea.style.backgroundColor = this.state.value;
+        event.preventDefault();
+      }
+
+      render() {
+        var divStyle = {backgroundColor: '#ff0'};
+        return (
+          <div>
+            <form onSubmit={this.handleSubmit}>
+              <label>
+                Valitse juhlaväri:<br />
+                <select value={this.state.value} onChange={this.handleChange}>
+                  <option value="#ff0">Keltainen</option>
+                  <option value="#f00">Punainen</option>
+                  <option value="#0f0">Vihreä</option>
+                </select>
+              </label><br />
+              Mikä juhla?<br />
+              <input type="text" onChange={this.handleTextChange} ref="tarina" /><br /><br />
+              <input className="nappi" type="submit" value="Vaihda valittu taustaväri" />
+            </form>
+
+            <div ref="colorarea" style={divStyle} className="tulosalue">
+              <strong>Tulosalue</strong><br />
+              <span>Valittu: {this.state.value}</span><br /><br />
+              <span ref="textline">{this.state.textlinevalue}</span>
+            </div>
+          </div>
+        );
+      }
+    }
+
+ReactDOM.render(
+    <Eventer />,
+    document.getElementById("root")
+);
+    </script>
+</body>
+
+</html>

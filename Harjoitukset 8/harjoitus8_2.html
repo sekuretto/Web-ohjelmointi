@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harjoitukset 8: Tehtävä 2</title>
+  <style>
+    .box {
+      border: 1px dashed #aaa;
+      padding: 15px;
+    }
+
+    button {
+      background-color: #069;
+      border-radius: 5px;
+      color: #fff;
+      margin-bottom: 5px;
+      padding: 5px 15px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Tuota tämä ReactDOM.render()-metodilla:</h3>
+  <div id="malli" class="box">
+    <div>
+      <button>Nappi</button>
+      <p>Mieleni minun tekevi, aivoni ajattelevi</p>
+    </div>
+  </div>
+
+  <h3>Sinun ratkaisu:</h3>
+  <div id="ratkaisu" class="box"></div>
+
+  <!-- Main library-->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <!-- DOM -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- JSX -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script type="text/babel">
+    var kalevalaText = 'Mieleni minun tekevi, aivoni ajattelevi';
+    ReactDOM.render(
+      <div>
+        <button>Nappi</button>
+        <p>{kalevalaText}</p>
+      </div>,
+      document.getElementById("ratkaisu")
+    );
+  </script>
+</body>
+
+</html>
