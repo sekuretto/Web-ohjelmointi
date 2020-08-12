@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harjoitukset 9: Tehtävä 1</title>
+</head>
+
+<body>
+  <h2>Highscores</h2>
+
+  <div id="ratkaisu"></div>
+
+  <!-- Main library-->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <!-- DOM -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- JSX -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script type="text/babel">
+    let highscoreData = [
+      { id: 1, name: 'Jason', score: 4000 },
+      { id: 2, name: 'Make', score: 3000 },
+      { id: 3, name: 'Bill', score: 2000 },
+      { id: 4, name: 'Liza', score: 1000 }
+    ];
+
+    // Highscores component
+    class Highscores extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          highscores: [],
+          loaded: false
+        };
+        this.onLoadClick = this.onLoadClick.bind(this);
+        this.getHighscores = this.getHighscores.bind(this);
+      }
+
+      render() {
+        // Jos dataa EI ole VIELÄ ladattu:
+        if (!this.state.loaded) {
+          window.addEventListener('load', this.onLoadClick);
+          return ( 
+            <div>
+            <p onClick = {this.onLoadClick}>Loading...</p>
+
+            </div>
+          );
+        }
+      
+      // Näytetään haettu JSON-data:
+      return ( 
+        <div>
+          <ul> {
+            this.state.highscores.map((highscore, index) =>
+            <li key = {index}>{highscore.name}: {highscore.score}</li>
+            )
+          } </ul>
+          <p><button onClick = {this.onLoadClick}>Load again</button></p>
+        </div>
+      );
+      }
+
+      // Tyhjätään mahdollisesti aiemmin haettu data ja haetaan uudelleen
+      onLoadClick() {
+        this.setState({
+          highscores: [],
+          loaded: false
+        });
+        this.getHighscores();
+      }
+
+      // ladataan henkilötiedot
+      getHighscores() {
+        setTimeout(() => this.setState({highscores: highscoreData, loaded:true}), 3000);
+      }
+    }
+
+    // render component
+    ReactDOM.render( 
+      <Highscores/>,
+      document.getElementById("ratkaisu")
+    );
+  </script>
+
+</body>
+
+</html>

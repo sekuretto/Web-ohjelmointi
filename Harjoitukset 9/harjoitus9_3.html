@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Harjoitukset 9: Tehtävä 3</title>
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    h1 {
+      background-color: cadetblue;
+      text-align: center;
+      color: white;
+      padding: 5px 0;
+      border-radius: 0 0 2px 2px;
+    }
+
+    ul {
+      list-style-type: square;
+      margin: 20px 0 20px 0;
+    }
+
+    input[type=text] {
+      border: 1px solid #ccc;
+      padding: 5px;
+      width: 300px;
+      font-size: 15px;
+    }
+
+    input[type=submit] {
+      border: 1px solid #ccc;
+      margin-left: 15px;
+      padding: 5px 15px;
+      font-size: 16px;
+    }
+
+    #root {
+      width: 400px;
+      background-color: aliceblue;
+      border-radius: 3px;
+      padding: 0 15px 15px;
+      margin: 10px auto;
+      border: 1px solid #ddd;
+    }
+
+    .delete {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script type="text/babel">
+    // TodoBanner component
+class TodoBanner extends React.Component {
+    // render this component
+    render (){
+        return (
+            <h1>Todo Example with React</h1>
+        )
+    }
+
+}
+
+// TodoList component
+class TodoList extends React.Component {
+
+    // render this component
+    render () {
+      return (
+         <ul>
+            <li>KORVAA TÃ„MÃ„ OHJELMAKOODILLASI</li>
+        </ul>
+      )
+    }
+
+}
+
+// TodoForm component
+class TodoForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {item: ""};
+    // LISÃ„Ã„ TÃ„HÃ„N JOS TARVIT MUUTA
+  }
+    // add a new item -> call parent
+    handleSubmit (e) {
+        // prevent normal submit event
+        e.preventDefault();
+        // call parent to add a new item
+        //????
+        // remove new typed item from text input
+        this.refs.item.value = "";
+        //????
+        // focus text input
+        //????
+    }
+
+    // render component
+    render (){
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <p>Korvaa tÃ¤mÃ¤!</p>
+            </form>
+        );
+    }
+
+}
+
+// App component
+class App extends React.Component {
+    // init state
+    constructor(props) {
+      super(props);
+      this.state = {items: []};
+      // LISÃ„Ã„ TÃ„HÃ„N JOS TARVIT JOTAIN?
+    }
+
+    // add a new item
+    addItem (newItem) {
+        // add new item to items array
+        //???
+        // render again
+        //???
+    }
+
+    // remove item
+    removeItem (index){
+        // remove from items array
+        //???
+        // render again
+        //???
+    }
+
+    // render component
+    render () {
+        return (
+            <div>
+                <TodoBanner/>
+                <TodoForm onFormSubmit={this.addItem} />
+                <TodoList items={this.state.items} removeItem={this.removeItem} />
+            </div>
+        )
+    }
+
+}
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+);
+  </script>
+</body>
+
+</html>

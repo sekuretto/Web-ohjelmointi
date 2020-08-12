@@ -59,7 +59,7 @@
         // Haetaan kaikki button-elementit
         var myElements = document.querySelectorAll("button");
 
-        // Asetetaan kaikille buttoneille alkuperÃ¤inen vÃ¤ri:
+        // Asetetaan kaikille buttoneille alkuperäinen väri:
         for (var i = 0; i < myElements.length; i++) {
           myElements[i].style.backgroundColor = "#069";
         }
@@ -67,17 +67,17 @@
         let luku1 = parseInt(this.refs.n1.value);
         let luku2 = parseInt(this.refs.n2.value);
         switch (index) {
-          case "+":
+          case '+':
             let summa = luku1 + luku2;
             this.refs.tulos.value = summa;
-            this.button.style.backgroundColor = "#fff";
-          case "-":
+            button.style.backgroundColor = "#fff";
+          case '-':
             let erotus = luku1 - luku2;
             this.refs.tulos.value = erotus;
-          case "*":
+          case '*':
             let tulo = luku1 * luku2;
             this.refs.tulos.value = tulo;
-          case "/":
+          case '/':
             let jako = luku1 / luku2;
             this.refs.tulos.value = jako; 
         }

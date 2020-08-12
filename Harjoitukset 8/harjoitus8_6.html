@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harjoitukset 8: Tehtävä 6</title>
+  <style>
+    body {
+      width: 400px;
+      margin: auto
+    }
+
+    .box {
+      border: 1px dashed #000;
+      padding: 15px;
+      background-color: #adbed8;
+    }
+
+    img {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Autolaskuri</h3>
+  <p>Klikkaa mieleistä auton kuvaa.</p>
+  <div id="ratkaisu" class="box"></div>
+
+  <!-- Main library-->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <!-- DOM -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- JSX -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script type="text/babel">
+    class Autolaskuri extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          escort: 0,
+          passat: 0
+        }
+        this.onImageClick = this.onImageClick.bind(this);
+      }
+
+      onImageClick {
+
+      }
+      
+      render() {
+        // let autot = [23,16];
+        return (
+          <div>
+            <p>Escorts: {this.state.escort}</p>
+            <img src="escort.jpg" onClick={this.onImageClick} />
+            <p>Passats: {this.state.passat}</p>
+            <img src="passat.jpg" onClick={this.onImageClick} />
+          </div>
+        );
+      }
+    }
+
+  ReactDOM.render(
+    <Autolaskuri />,
+    document.getElementById('ratkaisu')
+  );
+</script>
+</body>
+
+</html>
