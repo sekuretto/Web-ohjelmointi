@@ -37,3 +37,9 @@ Tracalorie: Module Pattern
   
 Microposts: Webpack & Modules  
 ![Microposts](/microposts/microposts.png)  
+  
+- - - - -  
+  
+Muut projektit:
+Typewriter: typewriter-efekti websivuille  
+![Typewriter](/typewriter/typewriter.png)  
