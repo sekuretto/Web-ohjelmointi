@@ -28,6 +28,12 @@ Github Finder: API
 ![Github Finder](/githubfinder/githubfinder2.png)  
   
 WeatherJS: API  
+![WeatherJS](/weatherjs/weatherjs.png)  
+  
 Profile Scroller: Generators  
+  
 Tracalorie: Module Pattern  
+![Tracalorie](/tracalorie/tracalorie.png)  
+  
 Microposts: Webpack & Modules  
+![Microposts](/microposts/microposts.png)  
