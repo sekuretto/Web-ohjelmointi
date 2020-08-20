@@ -22,7 +22,11 @@ Booklist: OOP
 ![Booklist](/booklist/booklist.png)  
   
 EasyHttp3: Ajax, Fetch, Async/Await  
+  
 Github Finder: API  
+![Github Finder](/githubfinder/githubfinder.png)  
+![Github Finder](/githubfinder/githubfinder2.png)  
+  
 WeatherJS: API  
 Profile Scroller: Generators  
 Tracalorie: Module Pattern  
