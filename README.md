@@ -8,6 +8,7 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
   
 Modern JavaScript From Beginning (Brad Traversy/Udemy) -kurssin harjoitusprojektit:  
 - Tasklist: DOM, Local Storage  
+![Tasklist](/tasklist/tasklist.png)
 - Loan Calculator: DOM  
 - Number Guesser: DOM, Local Storage  
 - Booklist: OOP  
