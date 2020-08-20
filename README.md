@@ -40,6 +40,6 @@ Microposts: Webpack & Modules
   
 - - - - -  
   
-Muut projektit:
+Muut projektit:  
 Typewriter: typewriter-efekti websivuille  
 ![Typewriter](/typewriter/typewriter.png)  
