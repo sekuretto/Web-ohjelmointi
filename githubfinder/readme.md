@@ -1,4 +1,4 @@
-**Github Finder**  
+# Github Finder  
 - learning API  
 
 ![Github Finder](/githubfinder/githubfinder.png)  
