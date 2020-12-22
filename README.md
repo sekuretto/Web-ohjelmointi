@@ -9,34 +9,17 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 - - - - - - -  
   
 **Modern JavaScript From Beginning** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:  
-Tasklist: DOM, Local Storage  
-![Tasklist](/tasklist/tasklist.png)  
-  
-Loan Calculator: DOM  
-![Loan Calculator](/loancalculator/loancalculator.png)  
-  
-Number Guesser: DOM, Local Storage  
-![Number Guesser](/numberguesser/numberguesser.png)  
-  
-Booklist: OOP  
-![Booklist](/booklist/booklist.png)  
-  
-EasyHttp3: Ajax, Fetch, Async/Await  
-  
-Github Finder: API  
-![Github Finder](/githubfinder/githubfinder.png)  
-![Github Finder](/githubfinder/githubfinder2.png)  
-  
-WeatherJS: API  
-![WeatherJS](/weatherjs/weatherjs.png)  
-  
-Profile Scroller: Generators  
-  
-Tracalorie: Module Pattern  
-![Tracalorie](/tracalorie/tracalorie.png)  
-  
-Microposts: Webpack & Modules  
-![Microposts](/microposts/microposts.png)  
+- Tasklist (DOM, Local Storage)  
+- Loan Calculator (DOM)  
+- Number Guesser (DOM, Local Storage)  
+- Booklist (OOP)  
+- EasyHttp3 (Ajax, Fetch, Async/Await)  
+https://github.com/sekuretto/JavaScript/tree/master/ajax/async_await/easyhttp3  
+- Github Finder (API)    
+- WeatherJS (API)  
+- Profile Scroller (Generators)  
+- Tracalorie (Module Pattern)  
+- Microposts (Webpack & Modules)  
   
 - - - - -  
   
