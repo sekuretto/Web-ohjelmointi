@@ -10,24 +10,23 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
   
 **Modern JavaScript From Beginning** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:  
 - [Tasklist](../master/tasklist) (DOM, Local Storage)  
-- Loan Calculator (DOM)  
-- Number Guesser (DOM, Local Storage)  
-- Booklist (OOP)  
-- EasyHttp3 (Ajax, Fetch, Async/Await)  
-https://github.com/sekuretto/JavaScript/tree/master/ajax/async_await/easyhttp3  
-- Github Finder (API)    
-- WeatherJS (API)  
-- Profile Scroller (Generators)  
-- Tracalorie (Module Pattern)  
-- Microposts (Webpack & Modules)  
+- [Loan Calculator](../master/loancalculator) (DOM)  
+- [Number Guesser](../master/numberguesser) (DOM, Local Storage)  
+- [Booklist](../master/booklist) (OOP)  
+- [EasyHttp3](../master/ajax/async_await/easyhttp3) (Ajax, Fetch, Async/Await)   
+- [Github Finder](../master/githubfinder) (API)    
+- [WeatherJS](../master/weatherjs) (API)  
+- [Profile Scroller](../master/profilescroller) (Generators)  
+- [Tracalorie](../master/tracalorie) (Module Pattern)  
+- [Microposts](../master/microposts) (Webpack & Modules)  
   
 - - - - -  
 
 **20 Web Projects With Vanilla JavaScript** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:
-- Form Validator (DOM, regex, functions)  
+- [Form Validator](../master/form-validator) (DOM, regex, functions)  
 
 - - - - -  
   
 Muut projektit:  
-Typewriter: typewriter-efekti websivuille  
+[Typewriter](../master/typewriter): typewriter-efekti websivuille  
 ![Typewriter](/typewriter/typewriter.png)  
