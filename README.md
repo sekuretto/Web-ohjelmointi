@@ -22,6 +22,11 @@ https://github.com/sekuretto/JavaScript/tree/master/ajax/async_await/easyhttp3
 - Microposts (Webpack & Modules)  
   
 - - - - -  
+
+**20 Web Projects With Vanilla JavaScript** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:
+- Form Validator (DOM, regex, functions)  
+
+- - - - -  
   
 Muut projektit:  
 Typewriter: typewriter-efekti websivuille  
