@@ -25,9 +25,9 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 **20 Web Projects With Vanilla JavaScript** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:
 - [Form Validator](../master/form-validator) (DOM, regex, functions)  
 - [Movie Seat Booking](../master/movie-seat-booking) (DOM, Local Storage)  
+- [Custom Video Player](../master/custom-video-player) (HTML5 video, API)  
 
 - - - - -  
   
 Muut projektit:  
-[Typewriter](../master/typewriter): typewriter-efekti websivuille  
-![Typewriter](/typewriter/typewriter.png)  
+[Typewriter](../master/typewriter): typewriter-efekti websivuille   
