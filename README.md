@@ -28,7 +28,19 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 - [Custom Video Player](../master/custom-video-player) (HTML5 video API, DOM)  
 - [Exchange Rate Calculator](../master/exchange-rate) (DOM, Fetch API, JSON)  
 - [DOM Array Methods](../master/dom-array-methods) (DOM, Fetch with Async/Await, forEach, map, filter, sort, reduce)  
+- [Menu Slider & Modal](../master/modal-menu-slider) (DOM, CSS)  
+-  
+-  
+-  
+  
+- - - - -  
 
+**50 Projects In 50 Days - HTML, CSS & JavaScript** (Brad Traversy/Florin Pop/Udemy) -kurssin harjoitusprojektit:
+- [Expanding Cards](../master/expanding-cards) (DOM, CSS animation)   
+-  
+-  
+-  
+  
 - - - - -  
   
 Muut projektit:  
