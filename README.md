@@ -25,7 +25,8 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 **20 Web Projects With Vanilla JavaScript** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:
 - [Form Validator](../master/form-validator) (DOM, regex, functions)  
 - [Movie Seat Booking](../master/movie-seat-booking) (DOM, Local Storage)  
-- [Custom Video Player](../master/custom-video-player) (HTML5 video, API)  
+- [Custom Video Player](../master/custom-video-player) (HTML5 video API, DOM)  
+- [Exchange Rate Calculator](../master/exchange-rate) (DOM, Fetch API, JSON)  
 
 - - - - -  
   
