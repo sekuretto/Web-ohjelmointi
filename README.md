@@ -36,7 +36,8 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 - - - - -  
 
 **50 Projects In 50 Days - HTML, CSS & JavaScript** (Brad Traversy/Florin Pop/Udemy) -kurssin harjoitusprojektit:
-- [Expanding Cards](../master/expanding-cards) (DOM, CSS animation)   
+- [Expanding Cards](../master/expanding-cards) 
+- [Progress Steps](../master/progress-steps)  
 -  
 -  
 -  
