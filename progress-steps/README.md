@@ -1,8 +1,8 @@
-## Expanding Cards
+## Progress Steps
 
-Image gallery (or data cards) with expanding cards  
+Progress steps as seen in multipage forms or web stores 
 
-![Expanding Cards](expanding-cards.png)  
+![Progress Steps]](progress-steps.png)  
 
 <!-- ## Project Specifications
 

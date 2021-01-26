@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 :root {
   --line-border-fill: #3498db;
@@ -11,7 +11,7 @@
 
 body {
   background-color: #f6f7fb;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Lato', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
