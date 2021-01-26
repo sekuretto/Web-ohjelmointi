@@ -2,7 +2,7 @@
 
 Progress steps as seen in multipage forms or web stores 
 
-![Progress Steps]](progress-steps.png)  
+![Progress Steps](progress-steps.png)  
 
 <!-- ## Project Specifications
 
