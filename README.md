@@ -28,7 +28,8 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 - [Custom Video Player](../master/custom-video-player) (HTML5 video API, DOM)  
 - [Exchange Rate Calculator](../master/exchange-rate) (DOM, Fetch API, JSON)  
 - [DOM Array Methods](../master/dom-array-methods) (DOM, Fetch with Async/Await, forEach, map, filter, sort, reduce)  
-- [Menu Slider & Modal](../master/modal-menu-slider) (DOM, CSS)  
+- [Menu Slider & Modal](../master/modal-menu-slider) (DOM, CSS transition & animation)  
+- [Hangman Game](../master/hangman) (DOM, SVG, Events)  
 -  
 -  
 -  

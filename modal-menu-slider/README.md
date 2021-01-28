@@ -1,8 +1,10 @@
 ## Modal & Menu Slider
 
-Simple landing page with sliding menu and modal  
+Simple landing page with sliding menu and pop-up modal  
 
 ![Menu Silder & Modal](modal-menu-slider.png)  
+![Menu Silder Open](modal-menu-slider2.png)  
+![Modal Open](modal-menu-slider3.png)  
 
 ## Project Specifications
 

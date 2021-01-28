@@ -6,10 +6,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Slider & Modal</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a96490c3a3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <nav>
+    <div class="logo">
+      <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="user">
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </nav>
 
+  <header>
+    <button id="toggle" class="toggle">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+    <h1>My Landing Page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ab.</p>
+    <button class="cta-btn" id="open">Sign Up</button>
+  </header>
+
+  <div class="container">
+    <h2>What is this landing page about</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate natus doloribus veritatis ut sint! Dolores,
+      sint nulla? Illum, assumenda ipsum vero ut pariatur incidunt obcaecati consectetur architecto natus ad quia?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum possimus doloremque sunt architecto, aliquid
+      enim quod aperiam. Dolores, neque?</p>
+
+    <h2>Tell Me More</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis quo cumque voluptatem, quae ea
+      consequuntur rerum, itaque exercitationem ducimus inventore porro possimus iure quidem magni vero tempora et
+      laudantium aliquid voluptatibus facere aut fugiat odio! Deleniti corporis voluptate reprehenderit.</p>
+
+    <h2>Benefits</h2>
+    <ul>
+      <li>Lifetime Access</li>
+      <li>30 Day Money Back</li>
+      <li>Tailored Customer Support</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea possimus, vero harum nisi deleniti tenetur, aut quos
+      quis enim perferendis id magni asperiores ad eum obcaecati maxime illo! Maxime quaerat voluptatem, dolores, qui
+      aliquid tempora odio sint magni aut, veritatis soluta exercitationem praesentium earum autem fugit tenetur
+      deleniti dolor distinctio saepe harum illo delectus fuga natus. Ut enim porro tempora expedita reiciendis eaque
+      voluptatem? Illum iste ab nesciunt! Mollitia, dignissimos.</p>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-container" id="modal">
+    <div class="modal">
+      <button class="close-btn" id="close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>Sign Up</h3>
+      </div>
+      <div class="modal-content">
+        <p>Register with us to get offers, support and more</p>
+        <form class="modal-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Enter name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="Enter email">
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-input" placeholder="Enter password">
+          </div>
+          <div>
+            <label for="password2">Confirm password</label>
+            <input type="password" id="password2" class="form-input" placeholder="Confirm password">
+          </div>
+          <input type="submit" value="Submit" class="submit-btn">
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 

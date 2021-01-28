@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
   --modal-duration: 1s;
@@ -17,7 +17,8 @@ body {
 }
 
 body.show-nav {
-  /* Width of nav */
+  /* width of nav */
+  /* also translate() works in this case */
   transform: translateX(200px);
 }
 
