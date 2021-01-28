@@ -1,6 +1,9 @@
 ## Hangman Game
 
-Select a letter to figure out a hidden word in a set amount of chances
+Select a letter to figure out a hidden word in a set amount of chances  
+
+![Hangman](hangman.png)  
+![Hangman](hangman2.png)  
 
 ## Project Specifications
 
