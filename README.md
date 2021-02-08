@@ -1,6 +1,6 @@
 # JavaScript
 
-JAMKin **Web-ohjelmointi** -kurssin materiaalit ja harjoitukset (materiaalit: Ari Rantala).  
+JAMKin **Web-ohjelmointi** -kurssin (kesä 2020) materiaalit ja harjoitukset (materiaalit: Ari Rantala).  
 Kurssin aihe: JavaScriptin perusteet ja tutustuminen jQueryyn ja Reactiin.  
   
 Omat harjoitustehtävien (Harjoitukset 1-9) toteutukset nähtävissä web-osoitteessa:  
@@ -20,6 +20,8 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 - [Tracalorie](../master/tracalorie) (Module Pattern)  
 - [Microposts](../master/microposts) (Webpack & Modules)  
   
+Kurssi suoritettu kesällä 2020.  
+  
 - - - - -  
 
 **20 Web Projects With Vanilla JavaScript** (Brad Traversy/Udemy) -kurssin harjoitusprojektit:
@@ -30,6 +32,8 @@ https://student.labranet.jamk.fi/~K8691/webohjelmointi.html
 - [DOM Array Methods](../master/dom-array-methods) (DOM, Fetch with Async/Await, forEach, map, filter, sort, reduce)  
 - [Menu Slider & Modal](../master/modal-menu-slider) (DOM, CSS transition & animation)  
 - [Hangman Game](../master/hangman) (DOM, SVG, Events)  
+- [Meal Finder](../master/meal-finder) (Fetch API)  
+- [Expense Tracker](../master/expense-tracker) (Array Methods & Local Storage)    
 -  
 -  
 -  
