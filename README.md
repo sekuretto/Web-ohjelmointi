@@ -33,7 +33,8 @@ Kurssi suoritettu kesällä 2020.
 - [Menu Slider & Modal](../master/modal-menu-slider) (DOM, CSS transition & animation)  
 - [Hangman Game](../master/hangman) (DOM, SVG, Events)  
 - [Meal Finder](../master/meal-finder) (Fetch API)  
-- [Expense Tracker](../master/expense-tracker) (Array Methods & Local Storage)    
+- [Expense Tracker](../master/expense-tracker) (Array Methods & Local Storage)   
+- [Music Player](../master/music-player) (HTML5 Audio API, CSS Animation)  
 -  
 -  
 -  
