@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');

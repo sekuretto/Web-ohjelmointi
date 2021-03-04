@@ -35,7 +35,10 @@ Kurssi suoritettu kesällä 2020.
 - [Meal Finder](../master/meal-finder) (Fetch API)  
 - [Expense Tracker](../master/expense-tracker) (Array Methods & Local Storage)   
 - [Music Player](../master/music-player) (HTML5 Audio API, CSS Animation)  
--  
+- [Infinite Scroll Posts](../master/infinite_scroll_blog) (Fetch, Async/Await, CSS Loader)  
+- [Typing Game](../master/typing-game) (DOM, Intervals, Events)  
+- [Speech Text Reader](../master/speech-text-reader) (Speech Synthesis)  
+- 
 -  
 -  
   
