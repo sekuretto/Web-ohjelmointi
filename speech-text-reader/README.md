@@ -2,6 +2,8 @@
 
 A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
 
+![Speech Text Reader](speech-text-reader.png)  
+
 ## Project Specifications
 
 - Create responsive UI (CSS Grid) with picture buttons

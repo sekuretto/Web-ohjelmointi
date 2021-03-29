@@ -1,3 +1,4 @@
+// https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
 const main = document.querySelector('main');
 const voicesSelect = document.getElementById('voices');
 const textarea = document.getElementById('text');

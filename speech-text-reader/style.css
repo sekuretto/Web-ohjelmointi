@@ -94,7 +94,7 @@ select:focus {
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
 }
 
 .box {
