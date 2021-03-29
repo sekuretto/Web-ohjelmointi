@@ -38,6 +38,8 @@ Kurssi suoritettu kesällä 2020.
 - [Infinite Scroll Posts](../master/infinite_scroll_blog) (Fetch, Async/Await, CSS Loader)  
 - [Typing Game](../master/typing-game) (DOM, Intervals, Events)  
 - [Speech Text Reader](../master/speech-text-reader) (Speech Synthesis)  
+- [Memory Cards](../master/memory-cards) (CSS Effects, Local Storage)  
+- [Lyrics Search](../master/lyrics-search) (Fetch. Pagination, Lyrics.ovh API)  
 - 
 -  
 -  
