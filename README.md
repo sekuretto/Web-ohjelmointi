@@ -40,6 +40,7 @@ Kurssi suoritettu kesällä 2020.
 - [Speech Text Reader](../master/speech-text-reader) (Speech Synthesis)  
 - [Memory Cards](../master/memory-cards) (CSS Effects, Local Storage)  
 - [Lyrics Search](../master/lyrics-search) (Fetch. Pagination, Lyrics.ovh API)  
+- [Relaxer App](../master/relaxer-app) (CSS Animations, setTimeout, setInterval)  
 - 
 -  
 -  
