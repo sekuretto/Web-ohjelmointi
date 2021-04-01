@@ -41,9 +41,10 @@ Kurssi suoritettu kesällä 2020.
 - [Memory Cards](../master/memory-cards) (CSS Effects, Local Storage)  
 - [Lyrics Search](../master/lyrics-search) (Fetch. Pagination, Lyrics.ovh API)  
 - [Relaxer App](../master/relaxer-app) (CSS Animations, setTimeout, setInterval)  
-- 
--  
--  
+- [Breakout Game](../master/breakout-game) (HTML5 Canvas API)  
+- [New Year Countdown](../master/new-year-countdown) (DOM, Date & Time)  
+- [Sortable List](../master/sortable-list) (Drag & Drop API)  
+- [Speak Number Guessing Game](../master/speak-number-guess) (Speech Recognition)   
   
 - - - - -  
 
