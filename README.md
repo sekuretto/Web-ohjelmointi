@@ -54,7 +54,8 @@ Kurssi suoritettu keväällä 2021.
 - [Expanding Cards](../master/expanding-cards) 
 - [Progress Steps](../master/progress-steps)  
 - [Rotating Navigation Animation](../master/rotating-nav-animation)  
--  
+- [Hidden Search Widget](../master/hidden-search)  
+- 
 -  
 -  
   
