@@ -44,13 +44,16 @@ Kurssi suoritettu kesällä 2020.
 - [Breakout Game](../master/breakout-game) (HTML5 Canvas API)  
 - [New Year Countdown](../master/new-year-countdown) (DOM, Date & Time)  
 - [Sortable List](../master/sortable-list) (Drag & Drop API)  
-- [Speak Number Guessing Game](../master/speak-number-guess) (Speech Recognition)   
+- [Speak Number Guessing Game](../master/speak-number-guess) (Speech Recognition)  
+
+Kurssi suoritettu keväällä 2021.  
   
 - - - - -  
 
 **50 Projects In 50 Days - HTML, CSS & JavaScript** (Brad Traversy/Florin Pop/Udemy) -kurssin harjoitusprojektit:
 - [Expanding Cards](../master/expanding-cards) 
 - [Progress Steps](../master/progress-steps)  
+- [Rotating Navigation Animation](../master/rotating-nav-animation)  
 -  
 -  
 -  
