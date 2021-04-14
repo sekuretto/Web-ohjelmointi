@@ -55,6 +55,10 @@ Kurssi suoritettu keväällä 2021.
 - [Progress Steps](../master/progress-steps)  
 - [Rotating Navigation Animation](../master/rotating-nav-animation)  
 - [Hidden Search Widget](../master/hidden-search)  
+- [Blurry Loading](../master/blurry-loading)  
+- [Scroll Animation](../master/scroll-animation)  
+- Split Landing Page  
+- Form Wave Animation  
 - 
 -  
 -  
