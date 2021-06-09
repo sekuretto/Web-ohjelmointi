@@ -64,8 +64,12 @@ Kurssi suoritettu keväällä 2021.
 - [Form Wave Animation](../master/form-input-wave)
 - [Sound Board](../master/sound-board)
 - [Dad Jokes](../master/dad-jokes)
-- Event KeyCodes
+- [Event KeyCodes](../master/event-keycodes)
 - FAQ Collapse
+- Random Choice Picker
+- Animated Navigation
+- Incrementing Counter
+- Drink Water
 -
 -
 -
